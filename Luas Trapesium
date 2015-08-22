@@ -1,0 +1,12 @@
+310 CLS
+judul$ = "Program Luas Trapesium"
+a = LEN(judul$)
+tengah = (80 / 2) - (a / 2)
+PRINT STRING$(80, "-")
+PRINT TAB(tengah); judul$
+PRINT STRING$(80, "-")
+INPUT "Masukkan panjang sisi atas  (cm)   : ", sisi1
+INPUT "Masukkan panjang sisi bawah (cm)   : ", sisi2
+INPUT "Masukkan tinggi trapesium   (cm)   : ", tinggi
+luas = (sisi1 + sisi2) * tinggi / 2
+PRINT "Luas trapesiumnya             = "; luas; "cm^2"

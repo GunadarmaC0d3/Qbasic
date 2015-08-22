@@ -1,0 +1,357 @@
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+PRINT
+FOR x = 1 TO 30
+
+    FOR i = 1 TO 1000000: NEXT i
+    PRINT TAB(x); "*";
+
+
+NEXT
+PRINT "   [ CREDIT BY ]";
+LOCATE 13, 50
+FOR x = 50 TO 80
+
+    FOR i = 1 TO 1000000: NEXT i
+    PRINT TAB(x); "*";
+
+
+NEXT
+SLEEP 2
+CLS
+0 COLOR 2
+a = 1
+aaa = (sss * 1)
+sss = (aaa * 1)
+ddd = a
+ccc = 1
+
+PRINT aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc; aaa; sss; ddd; ccc;
+x = x + 1
+IF x > 10000 THEN
+    LOCATE 20, 50
+    COLOR 4
+    PRINT "PROJECT"
+    LOCATE 10, 30
+    PRINT "PIN"
+    LOCATE 5, 40
+    PRINT "PASSWORD"
+    LOCATE 10, 10
+    PRINT "LOCKED"
+    LOCATE 15, 40
+    PRINT "NO SYSTEM IS SAVE"
+    LOCATE 11, 50
+    COLOR 7
+    PRINT "D  A  V  I  D"
+    LOCATE 13, 50
+    PRINT "R  A  N  D  A"
+    SLEEP 2
+    GOTO 10
+END IF
+
+GOTO 0
+10 CLS
+judul$ = "Program Matematika"
+a = LEN(judul$)
+tengah = (80 / 2) - (a / 2)
+COLOR 14
+PRINT STRING$(80, "-")
+PRINT TAB(tengah); judul$
+PRINT STRING$(80, "-")
+COLOR 7
+PRINT
+PRINT "1. Persegi panjang"
+PRINT "2. Lingkaran"
+PRINT "3. Segitiga"
+PRINT "4. Phitagoras"
+PRINT "5. Trapesium"
+PRINT "6. Keluar Program"
+50 PRINT
+INPUT "Masukkan Pilihan Anda[1/2/3/4/5/6] : ", opt1
+
+SELECT CASE opt1
+    CASE 1
+        70 CLS
+        judul$ = "Program Luas Persegi Panjang"
+        a = LEN(judul$)
+        tengah = (80 / 2) - (a / 2)
+        COLOR 14
+        PRINT STRING$(80, "-")
+        PRINT TAB(tengah); judul$
+        PRINT STRING$(80, "-")
+        COLOR 7
+
+        PRINT
+        INPUT "Masukkan nilai panjang (cm)  : ", panjang
+        INPUT "Masukkan nilai lebar   (cm)  : ", lebar
+        luas = lebar * panjang
+        PRINT
+        PRINT "Luas persegi panjangnya      : "; luas
+        PRINT
+        PRINT "1. Hitung Lagi"
+        PRINT "2. Menu Utama"
+        PRINT "3. Keluar Program"
+        80 INPUT "Masukkan Pilihan Anda[1/2/3] : ", opt2
+        SELECT CASE opt2
+            CASE 1
+                GOTO 70
+            CASE 2
+                GOTO 10
+            CASE 3
+                GOTO 1000
+            CASE ELSE
+                COLOR 20
+                PRINT "Pilihan Tidak Ada !!"
+                COLOR 7
+                SLEEP 2
+                GOTO 80
+
+        END SELECT
+
+
+    CASE 2
+        100 CLS
+        judul$ = "Lingkaran"
+        a = LEN(judul$)
+        tengah = (80 / 2) - (a / 2)
+        COLOR 14
+        PRINT STRING$(80, "-")
+        PRINT TAB(tengah); judul$
+        PRINT STRING$(80, "-")
+        COLOR 7
+        INPUT "Masukkan Luas      (  cm^2 ) : ", L
+        INPUT "Masukkan Keliling  (  cm   ) : ", K
+        INPUT "Masukkan Jari-jari (  cm   ) : ", r
+        PRINT
+        COLOR 5
+        PRINT "1. Mencari Luas"
+        PRINT "2. Mencari Keliling"
+        PRINT "3. Mencari Jari-jari"
+        PRINT
+        COLOR 7
+        120 INPUT "Masukkan Pilihan Anda (1/2/3):", opt
+        SELECT CASE opt
+            CASE 1
+                IF L <> 0 THEN
+                    hasil = L
+                ELSEIF r = 0 AND K <> 0 THEN
+                    r = (K / (2 * 3.14))
+                    GOTO 130
+                ELSEIF r <> 0 THEN
+                    130 hasil = (3.14 * r ^ 2)
+                ELSE
+                    COLOR 20
+                    PRINT "EROR!! "
+                    COLOR 7
+                    SLEEP 2
+                    GOTO 100
+                END IF
+            CASE 2
+                IF K <> 0 THEN
+                    hasil = K
+                ELSEIF r = 0 AND L <> 0 THEN
+                    r = ((L / 3.14) ^ 0.5)
+                    GOTO 150
+                ELSEIF r <> 0 THEN
+                    150 hasil = (2 * 3.14 * r)
+                ELSE
+                    COLOR 20
+                    PRINT "EROR!!"
+                    COLOR 7
+                    SLEEP 2
+                    GOTO 100
+                END IF
+            CASE 3
+                IF L = 0 THEN
+                    170 hasil = (K / (2 * 3.14))
+                ELSEIF K = 0 THEN
+                    hasil = ((L / 3.14) ^ 0.5)
+                ELSEIF K <> 0 AND L <> 0 THEN
+                    GOTO 170
+                ELSE
+                    COLOR 20
+                    PRINT "EROR!!"
+                    COLOR 7
+                    SLEEP 2
+                    GOTO 100
+                END IF
+            CASE ELSE
+                COLOR 20
+                PRINT "Pilihan Tidak Ada !!"
+                COLOR 7
+                SLEEP 2
+                GOTO 120
+        END SELECT
+        PRINT
+        PRINT "Hasilnya   :", hasil
+        PRINT
+        PRINT "1. Hitung Lagi"
+        PRINT "2. Menu Utama"
+        PRINT "3. Keluar Program"
+        200 INPUT "Masukkan Pilihan Anda :", opt
+        SELECT CASE opt
+            CASE 1
+                GOTO 100
+            CASE 2
+                GOTO 10
+            CASE 3
+                GOTO 1000
+            CASE ELSE
+                COLOR 20
+                PRINT "Pilihan Tidak Ada !!"
+                COLOR 7
+                SLEEP 2
+                GOTO 200
+        END SELECT
+
+    CASE 3
+        220 CLS
+        judul$ = "Luas Segitiga"
+        a = LEN(judul$)
+        tengah = (80 / 2) - (a / 2)
+        COLOR 14
+        PRINT STRING$(80, "-")
+        PRINT TAB(tengah); judul$
+        PRINT STRING$(80, "-")
+        COLOR 7
+        PRINT
+        COLOR 7
+        INPUT "Alas   ( cm )   :", a
+        INPUT "Tinggi ( cm )   :", t
+
+        luas = (a * t) / 2
+        PRINT
+        PRINT "Luas Bangunan Ini:"; luas
+
+        PRINT
+        PRINT "1. Hitung Lagi"
+        PRINT "2. Menu Utama"
+        PRINT "3. Keluar Program"
+        240 INPUT "Masukkan Pilihan Anda :", opt
+        SELECT CASE opt
+            CASE 1
+                GOTO 220
+            CASE 2
+                GOTO 10
+            CASE 3
+                GOTO 1000
+            CASE ELSE
+                COLOR 20
+                PRINT "Pilihan Tidak Ada !!"
+                COLOR 7
+                SLEEP 2
+                GOTO 240
+        END SELECT
+
+    CASE 4
+        250 CLS
+        judul$ = "Phitagoras"
+        a = LEN(judul$)
+        tengah = (80 / 2) - (a / 2)
+        COLOR 14
+        PRINT STRING$(80, "-")
+        PRINT TAB(tengah); judul$
+        PRINT STRING$(80, "-")
+        COLOR 7
+        PRINT "#KET : Kosongkan yang Tidak Diketahui ! "
+        COLOR 7
+        PRINT
+        INPUT "Masukkan Tinggi ( cm )     :", a
+        INPUT "Masukkan Alas   ( cm )     :", b
+        INPUT "Masukkan Miring ( cm )     :", c
+        PRINT
+        PRINT "1. Mencari Sisi Miring"
+        PRINT "2. Mencari Sisi Alas dan Tinggi"
+        PRINT
+        270 INPUT "Masukkan Pilihan Anda[1/2] : ", opt
+
+        SELECT CASE opt
+            CASE 1
+                hasil = (a ^ 2 + b ^ 2) ^ 0.5
+            CASE 2
+                hasil = ((c ^ 2) - ((b + a) ^ 2)) ^ 0.5
+            CASE ELSE
+                COLOR 20
+                PRINT "Lu Input Apaan Bro !!"
+                COLOR 7
+                PRINT
+                SLEEP 2
+                GOTO 270
+
+        END SELECT
+        PRINT
+        PRINT "Hasil Phitagorasnya : ", hasil
+        PRINT
+        PRINT "1. Hitung Lagi"
+        PRINT "2. Menu Utama"
+        PRINT "3. Keluar Program"
+        300 INPUT "Masukkan Pilihan Anda :", opt
+        SELECT CASE opt
+            CASE 1
+                GOTO 250
+            CASE 2
+                GOTO 10
+            CASE 3
+                GOTO 1000
+            CASE ELSE
+                COLOR 20
+                PRINT "Pilihan Tidak Ada !!"
+                COLOR 7
+                SLEEP 2
+                GOTO 300
+        END SELECT
+rem program david
+    CASE 5
+        310 CLS
+        judul$ = "Program Luas Trapesium"
+        a = LEN(judul$)
+        tengah = (80 / 2) - (a / 2)
+        COLOR 14
+        PRINT STRING$(80, "-")
+        PRINT TAB(tengah); judul$
+        PRINT STRING$(80, "-")
+        COLOR 7
+        PRINT
+        INPUT "Masukkan panjang sisi atas  (cm)   : ", sisi1
+        INPUT "Masukkan panjang sisi bawah (cm)   : ", sisi2
+        INPUT "Masukkan tinggi trapesium   (cm)   : ", tinggi
+        luas = (sisi1 + sisi2) * tinggi / 2
+        PRINT "Luas trapesiumnya                  : "; luas
+        PRINT
+        PRINT "1. Hitung Lagi"
+        PRINT "2. Menu Utama"
+        PRINT "3. Keluar Program"
+        330 INPUT "Masukkan Pilihan Anda :", opt
+        SELECT CASE opt
+            CASE 1
+                GOTO 310
+            CASE 2
+                GOTO 10
+            CASE 3
+                GOTO 1000
+            CASE ELSE
+                COLOR 20
+                PRINT "Pilihan Tidak Ada !!"
+                COLOR 7
+                SLEEP 2
+                GOTO 330
+        END SELECT
+        rem program randa
+    CASE 6
+        GOTO 1000
+    CASE ELSE
+        COLOR 20
+        PRINT "Tidak Ada Pilihan!!"
+        COLOR 7
+        GOTO 50
+END SELECT
+1000 END
